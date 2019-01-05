@@ -22,6 +22,19 @@ public class SharedAppData {
     public void load(Context c) {
         m_sharedPreferences = PreferenceManager.getDefaultSharedPreferences(c);
     }
+    public boolean hasKey(String key) {
+        return m_sharedPreferences.contains(key);
+    }
+
+    public boolean getBoolean(String key) {
+        return getBoolean(key, false);
+    }
+    public boolean getBoolean(String key, Boolean defaultValue) {
+        return m_sharedPreferences.getBoolean(key, defaultValue);
+    }
+    public void putBoolean(String key, boolean value) {
+        m_sharedPreferences.edit().putBoolean(key, value).commit();
+    }
 
     public int getInt(String key) {
         return getInt(key, 0);
@@ -69,7 +82,6 @@ public class SharedAppData {
     private SharedPreferences.Editor putDouble(final SharedPreferences.Editor edit, final String key, final double value) {
         return edit.putLong(key, Double.doubleToRawLongBits(value));
     }
-
     private double getDouble(final SharedPreferences prefs, final String key, final double defaultValue) {
         return Double.longBitsToDouble(prefs.getLong(key, Double.doubleToLongBits(defaultValue)));
     }
