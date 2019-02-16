@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">RMBLibrary</string>
+    <string name="cancel">Cancel</string>
     <string name="dialog_about_url"><u>https://github.com/RichMBateman</u></string>
     <string name="dialog_about_weblink">See more at</string>
     <string name="dialog_about_weblink_21">See more at https://github.com/RichMBateman</string>
     <string name="dialog_about_app_copyright">Copyright \u00a9 %1$d Rich Bateman</string>
     <string name="dialog_about_app_email">To contact the author, email RichMBateman@gmail.com</string>
     <string name="dialog_about_version_name">v%1$s</string>
+    <string name="ok">OK</string>
 </resources>
